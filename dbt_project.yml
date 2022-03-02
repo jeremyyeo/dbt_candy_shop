@@ -1,0 +1,19 @@
+name: "dbt_candy_shop"
+version: "1.0.0"
+config-version: 2
+
+profile: "snowflake"
+
+model-paths: ["models"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+  - "dbt_packages"
+
+models:
+  dbt_candy_shop:
+    +materialized: table
