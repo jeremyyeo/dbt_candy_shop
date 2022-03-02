@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: my_sources
+    schema: dbt_jyeo
+    tables:
+      - name: my_source
